@@ -53,6 +53,10 @@ H3 {
     cursor: pointer;
 }
 
+.contato:hover {
+	background-color: var(--verdeAz);
+}
+
 .contato-icon {
 	position: absolute;
     top: 25%;
