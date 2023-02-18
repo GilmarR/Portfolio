@@ -172,8 +172,41 @@ H3 {
 }
 
 .card .conteudo img {
-	    height: 50%;
+	height: 50%;
     width: auto;
+}
+
+.stick_project {
+	background: var(--pretoC);
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+    font-family: var(--teko);
+    letter-spacing: 3px;
+    color: var(--branco);
+}
+
+.stick_project div {
+	position: relative;
+	border: 1px solid var(--verdeAz);
+	border-radius: 20px;
+	padding: 20px;
+}
+
+.stick_project i {
+	position: absolute;
+	right: 20px;
+	font-size: 1.5em;
+}
+
+.stick_project span {
+	position: absolute;
+	right: 20px;
+	font-size: 1em;
+	color: var(--branco);
+    font-family: var(--teko);
+    letter-spacing: 3px;
+    color: var(--branco);	
 }
 
 .fa-node-js {
