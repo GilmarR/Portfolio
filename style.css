@@ -38,6 +38,14 @@ H3 {
 	letter-spacing: 2px;
 }
 
+.troca_tema {
+	display: flex;
+    position: absolute;
+    right: 100px;
+    cursor: pointer;
+    top: 30px;
+}
+
 .contato {
 	background-color: var(--pretoC);
 	color: var(--branco);
@@ -59,7 +67,7 @@ H3 {
 
 .contato-icon {
 	position: absolute;
-    top: 25%;
+    top: 26%;
     left: 35px;
     background-color: #333;
     padding: 10px;
@@ -163,10 +171,6 @@ H3 {
 	letter-spacing: 3px;
 }
 
-.card .conteudo {
-	padding: 20px;
-}
-
 .fa-brands {
 	font-size: 3em;
 }
@@ -264,4 +268,43 @@ H3 {
 
 .card:hover .tituloBox h4 {
 	display: none;
+}
+
+
+
+/*---------------------------------------------------------------------
+
+							DARK MODE
+
+----------------------------------------------------------------------*/
+
+body.dark-mode {
+	background: var(--pretoC);
+	color: var(--branco);
+	transition: 1s;
+}
+
+body.dark-mode .contato {
+	background: var(--brancoC);
+	color: var(--preto);
+}
+
+body.dark-mode .menu i {
+	color: var(--branco);
+	background: var(--branco);
+    -webkit-background-clip: text;
+}
+
+body.dark-mode .card,
+body.dark-mode .card .tituloBox,
+body.dark-mode .contato-icon,
+body.dark-mode .stick_project,
+body.dark-mode .stick_project span {
+	background: var(--brancoC);
+	color: var(--preto);
+}
+
+body.dark-mode .fa-github {
+	background: linear-gradient(41deg, rgb(0 0 0) 0%, rgb(62 62 62) 47%, rgb(143 143 143) 100%);
+	-webkit-background-clip: text;
 }
