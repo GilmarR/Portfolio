@@ -14,8 +14,12 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body style="transition: 1s;">
 	<header>
+		<div class="troca_tema">
+			<i class="fas fa-moon fa-2x troca_btn"></i>
+		</div>
+
 		<div class="contato">
 			<p class="m-0"> contato </p>
 		</div>
@@ -47,7 +51,7 @@
 		
 	</header>
 
-	<body>
+	<content>
 		<div class="container" id="inicio">
 			<div class="row">
 				<div class="d-none d-md-block col-md-5 p-0" align="end">
@@ -335,7 +339,7 @@
 				</div>
 			</div>
 		</div>
-	</body>
+	</content>
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
@@ -353,6 +357,30 @@
 	contato.onclick = function() {
 		card.classList.toggle('active');
 	}
+
+	const tema = document.querySelector('.troca_btn');
+	const body = document.querySelector('body');
+
+	// verifica se o usuário já escolheu um tema anteriormente
+	if (localStorage.getItem('tema') === 'dark') {
+	  body.classList.add('dark-mode');
+	  tema.classList.replace('fa-sun', 'fa-moon');
+	}
+
+	tema.addEventListener('click', () => {
+	  body.classList.toggle('dark-mode');
+	  if (body.classList.contains('dark-mode')) {
+	    localStorage.setItem('tema', 'dark');
+	    tema.classList.replace('fa-moon', 'fa-sun');
+	    tema.style.color = 'white';
+	    tema.style.transition = '1s';
+	  } else {
+	    localStorage.setItem('tema', 'light');
+	    tema.classList.replace('fa-sun', 'fa-moon');
+	    tema.style.color = 'black';
+	    tema.style.transition = '1s';
+	  }
+	});
 
 </script>	
 
