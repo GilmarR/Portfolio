@@ -163,8 +163,8 @@ H3 {
 	letter-spacing: 3px;
 }
 
-.conteudo {
-	padding: 10px;
+.card .conteudo {
+	padding: 20px;
 }
 
 .fa-brands {
