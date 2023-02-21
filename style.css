@@ -151,6 +151,10 @@ H3 {
 	border-radius: 20px;
 }
 
+.card p {
+	padding: 0 20px;
+}
+
 .card .tituloBox {
 	position: absolute;
 	top: 10px;
